@@ -1,0 +1,189 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #212121;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Profile Card */
+.profile-card {
+  background: #ffffff;
+  width: 390px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden; /* Clips elements outside the card */
+  text-align: center;
+  position: relative; /* Allows .vcard-download to position absolutely within this element */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.profile-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Card Background */
+.card-background {
+  height: 140px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.profile-image-container {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  background: #fff;
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Profile Information */
+.profile-info {
+  padding: 60px 20px 20px;
+}
+
+.profile-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.profile-title {
+  font-size: 16px;
+  color: #666;
+  margin: 5px 0;
+}
+
+.profile-company {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 20px;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+
+/* Companies Section */
+.company-logos {
+  margin: 10px  20px;
+  padding: 0 15px;
+}
+
+.company-logos-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.company-logos-list {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.company-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.company-logo:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+  .profile-card {
+    width: 300px;
+  }
+
+  .profile-info {
+    padding: 50px 15px 15px;
+  }
+
+  .social-links {
+    gap: 10px;
+  }
+
+  .company-logos-list {
+    gap: 10px;
+  }
+
+  .company-logo {
+    width: 100px;
+    height: 100px;
+  }
+}
+/* vCard Download Icon */
+.vcard-download {
+  position: absolute; /* Position relative to the .profile-card */
+  top: 15px; /* Positioned inside the card */
+  right: 15px; /* Positioned inside the card */
+  z-index: 1; /* Ensure it stays above the card background */
+}
+
+.download-icon {
+  width: 25px; /* Adjusted size for better alignment */
+  height: 25px;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.download-icon:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+/* Footer Section */
+.powered-by {
+  margin-top: 20px; /* Add some spacing above */
+  font-size: 12px;
+  color: #555;
+  text-align: center;
+  padding-bottom: 5px; /* Add spacing at the bottom of the card */
+}
+
+.powered-by a {
+  color: #0073e6; /* Link color */
+  text-decoration: none; /* Remove underline */
+  font-weight: 600;
+  margin-left: 4px; /* Spacing between text and link */
+}
+
+.powered-by a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
